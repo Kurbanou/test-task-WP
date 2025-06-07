@@ -32,6 +32,12 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--red);
 }
 
 button,
@@ -65,7 +71,7 @@ ol {
   box-shadow: 0 4px 26px rgba(0, 0, 0, 0.09);
   position: relative;
   z-index: 10;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .header__top {
@@ -77,6 +83,8 @@ ol {
   gap: 90px;
   color: var(--dark-gray);
   position: relative;
+  background-color: var(--white);
+  z-index: 1;
 }
 
 .header__logo {
@@ -176,27 +184,35 @@ header.active .header__burger :nth-child(3) {
 
 .nav_container {
   display: flex;
+  gap: 30px;
+  height: 630px;
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+
+header.active .nav_container {
+  display: flex;
 }
 
 .nav_container li {
-  width: 268px;
-  gap: 30px;
+  min-width: 268px;
 }
 
-.header_nav ul {
-  padding-top: 30px;
-  padding-bottom: 70px;
+.header_nav {
+  margin-top: 30px;
   font-size: 20px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 30px;
+  line-height: 2;
 }
 
-.rubrika_nav ul {
+.rubrika_nav {
   padding-top: 20px;
+}
+.rubrika_nav {
   display: flex;
   gap: 30px;
-  height: 495px;
 }
 
 /* nav-main */
@@ -208,11 +224,15 @@ li:has(> ul) {
 
 li:has(> ul) > ul {
   /* стили для a <li> вложенных*/
-
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 34px;
   font-weight: 400;
   font-size: 16px;
-  flex-direction: column;
+  max-height: 450px;
   flex-wrap: wrap;
+  line-height: 1.8;
 }
 
 @media (max-width: 1400px) {
