@@ -13,86 +13,117 @@
           <a href="#" class="header__logo">
             <img src="./assets/img/logo.svg" alt="ТЦ Сарафан" />
           </a>
-          <div class="header__info">
-            <div class="header__hours">
-              <p>Режим работы:</p>
-              <p>Пн–Сб: 10:00–21:00</p>
-              <p>Лента: 08:00–22:00</p>
+
+          <div class="header__hours">
+            <p class="header__hours_title">Режим работы:</p>
+            <div>
+              <p>пн-вс 10:00-21:00</p>
+              <p>Лента 08:00-22:00</p>
             </div>
-            <div class="header__link">
-              <a href="#">Контакты</a>
-              <a href="#">Карта ТЦ</a>
-            </div>
-            <nav class="menu">
-              <ul class="menu-main">
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">События</a></li>
-                <li><a href="#">Галерея</a></li>
-                <li><a href="#">Аренда</a></li>
-                <li><a href="#">Карта ТЦ</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Вакансии</a></li>
-                <li><a href="#">Тендеры</a></li>
-
-                <li>
-                  Магазины
-                  <ul>
-                    <li><a href="#">Все магазины</a></li>
-                    <li><a href="#">Женская одежда</a></li>
-                    <li><a href="#">Мужская одежда</a></li>
-                    <li><a href="#">Детская одежда</a></li>
-                    <li><a href="#">Обувь</a></li>
-                    <li><a href="#">Продукты</a></li>
-                    <li><a href="#">Цифровая и бытовая техника</a></li>
-                    <li><a href="#">Парфюмерия, косметика</a></li>
-                    <li><a href="#">Ювелирные украшения</a></li>
-                    <li><a href="#">Сувениры, подарки</a></li>
-                    <li><a href="#">Полезное</a></li>
-                    <li><a href="#">Товары для дома</a></li>
-                    <li><a href="#">Спортивные товары, одежда</a></li>
-                    <li><a href="#">Товары для животных</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  Кафе и рестораны
-                  <ul>
-                    <li><a href="#">Кафе и рестораны</a></li>
-                    <li><a href="#">Фастфуд</a></li>
-                    <li><a href="#">Кофейни</a></li>
-                    <li><a href="#">Десерты</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  Услуги и сервисы
-                  <ul>
-                    <li><a href="#">Банкоматы</a></li>
-                    <li><a href="#">Салоны связи</a></li>
-                    <li><a href="#">Парикмахерские</a></li>
-                    <li><a href="#">Другое</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  Развлечения
-                  <ul>
-                    <li><a href="#">Джунгли парк</a></li>
-                    <li><a href="#">Акции</a></li>
-                    <li><a href="#">Мероприятия</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-
-            <button class="header__search" aria-label="Поиск"></button>
-            <button class="header__burger" aria-label="Меню"></button>
           </div>
+          <div class="header__link">
+            <a href="#">Контакты</a>
+            <a href="#">Карта ТЦ</a>
+          </div>
+
+          <form
+            role="search"
+            method="get"
+            class="search-form"
+            action="http://skidles.by"
+          >
+            <label>
+              <input
+                type="search"
+                autocomplete="off"
+                class="search-field"
+                placeholder="Найти магазин"
+                value=""
+                name="s"
+              />
+            </label>
+            <button type="submit" class="search-submit">
+              <img src="./assets/img/svg/search.svg" alt="search" />
+            </button>
+          </form>
+          <div class="header__burger active">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="nav_container">
+          <nav class="header_nav">
+            <ul>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">События</a></li>
+              <li><a href="#">Галерея</a></li>
+              <li><a href="#">Аренда</a></li>
+              <li><a href="#">Карта ТЦ</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Вакансии</a></li>
+              <li><a href="#">Тендеры</a></li>
+            </ul>
+          </nav>
+          <nav class="rubrika_nav">
+            <ul>
+              <li>
+                <a href="#">Магазины</a>
+                <ul>
+                  <li><a href="#">Все магазины</a></li>
+                  <li><a href="#">Женская одежда</a></li>
+                  <li><a href="#">Мужская одежда</a></li>
+                  <li><a href="#">Детская одежда</a></li>
+                  <li><a href="#">Детские товары</a></li>
+                  <li><a href="#">Обувь</a></li>
+                  <li><a href="#">Кожгалантерея</a></li>
+                  <li><a href="#">Продукты</a></li>
+                  <li><a href="#">Цифровая и бытовая техника</a></li>
+                  <li><a href="#">Парфюмерия, косметика</a></li>
+                  <li><a href="#">Ювелирные украшения</a></li>
+                  <li><a href="#">Сувениры, подарки</a></li>
+                  <li><a href="#">Полезное</a></li>
+                  <li><a href="#">Товары для дома</a></li>
+                  <li><a href="#">Спортивные товары, одежда</a></li>
+                  <li><a href="#">Товары для животных</a></li>
+                </ul>
+              </li>
+
+              <li>
+                Кафе и рестораны
+                <ul>
+                  <li><a href="#">Кафе и рестораны</a></li>
+                  <li><a href="#">Фастфуд</a></li>
+                  <li><a href="#">Кофейни</a></li>
+                  <li><a href="#">Десерты</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">Услуги и сервисы</a>
+                <ul>
+                  <li><a href="#">Банкоматы</a></li>
+                  <li><a href="#">Салоны связи</a></li>
+                  <li><a href="#">Парикмахерские</a></li>
+                  <li><a href="#">Другое</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">Развлечения</a>
+                <ul>
+                  <li><a href="#">Джунгли парк</a></li>
+                  <li><a href="#">Акции</a></li>
+                  <li><a href="#">Мероприятия</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
 
-    <main>
+    <!-- <main>
       <section class="rent">
         <div class="container rent__container">
           <div class="rent__image">
@@ -133,7 +164,7 @@
             <div class="brands__slide">
               <img src="./assets/img/lenta-logo.png" alt="Лента" />
             </div>
-            <!-- Дополнительные слайды -->
+           
           </div>
         </div>
       </section>
@@ -168,9 +199,9 @@
           <img src="./assets/img/img5.jpg" alt="Фото ТЦ" />
         </div>
       </section>
-    </main>
+    </main> -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer__container">
         <nav class="footer__nav">
           <ul>
@@ -199,6 +230,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
+    <script src="app.js"></script>
   </body>
 </html>
