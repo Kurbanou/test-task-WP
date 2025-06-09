@@ -66,10 +66,6 @@ ol {
   padding: 0 80px;
 }
 
-main {
-  padding-top: 100px;
-}
-
 h1 {
   font-weight: 700;
   font-size: clamp(1rem, calc(1rem + 2.5vw), 41px);
@@ -136,8 +132,7 @@ main li::marker {
 .header {
   box-shadow: 0 4px 26px rgba(0, 0, 0, 0.09);
   position: relative;
-  position: fixed;
-  top: 0;
+
   width: 100%;
   z-index: 10;
   background-color: var(--white);
@@ -362,7 +357,7 @@ li:has(> ul) > ul {
     top: 120px;
   }
   .header__top {
-    gap: 30px;
+    gap: 20px;
   }
 
   .rubrika_nav {
@@ -380,6 +375,7 @@ li:has(> ul) > ul {
     text-align: center;
     padding: 110px 0 140px 0;
     line-height: 2.2;
+    position: relative;
   }
 
   .header_nav {
@@ -430,17 +426,24 @@ li:has(> ul) > ul {
 /* Arenda */
 .promo-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 80px;
 }
 
-.promo-image {
+.promo-image img {
   width: 100%;
 }
 
 .promo-content {
   width: 100%;
-  max-width: 567px;
+  max-width: 560px;
+}
+
+@media (max-width: 1919px) {
+  .promo-content {
+    max-width: 100%;
+  }
 }
 
 .promo-content h1 {
