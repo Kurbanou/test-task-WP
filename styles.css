@@ -20,8 +20,8 @@ html,
 body {
   height: 100%;
   font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1;
+  font-size: 13px;
+  line-height: 1.4rem;
   font-weight: 400;
   background: var(--white);
   color: var(--black);
@@ -68,6 +68,68 @@ ol {
 
 main {
   padding-top: 100px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(1rem, calc(1rem + 2.5vw), 41px);
+  line-height: 1.5;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+
+header ul,
+footer ul {
+  list-style: none;
+}
+
+main li {
+  margin-left: 15px;
+}
+
+main ul,
+main ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main li::marker {
+  color: var(--red);
+  font-size: 20px;
+}
+
+.download-btn {
+  font-size: 22px;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  line-height: 1.5;
+  display: block;
+  width: fit-content;
+}
+
+.download-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -33px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/img/svg/file.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* header */
@@ -344,7 +406,7 @@ li:has(> ul) > ul {
   margin: 30px 0 20px 0;
   display: flex;
   gap: 8px;
-  line-height: 2;
+  line-height: 1;
   align-items: center;
 }
 .beforePage {
@@ -379,4 +441,21 @@ li:has(> ul) > ul {
 .promo-content {
   width: 100%;
   max-width: 567px;
+}
+
+.promo-content h1 {
+  margin-bottom: 20px;
+}
+
+.promo-content .download-btn {
+  margin-top: 35px;
+  margin-bottom: 70px;
+}
+
+.promo-content h2 {
+  margin-bottom: 35px;
+}
+
+.advantages {
+  margin-bottom: 30px;
 }
