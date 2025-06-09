@@ -23,7 +23,7 @@ body {
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
-  background: #fff;
+  background: var(--white);
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -66,10 +66,17 @@ ol {
   padding: 0 80px;
 }
 
+main {
+  padding-top: 100px;
+}
+
 /* header */
 .header {
   box-shadow: 0 4px 26px rgba(0, 0, 0, 0.09);
   position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 10;
   background-color: var(--white);
 }
@@ -332,10 +339,44 @@ li:has(> ul) > ul {
   }
 }
 
+/* breadcrumbs */
+.breadcrumbs_inner {
+  margin: 30px 0 20px 0;
+  display: flex;
+  gap: 8px;
+  line-height: 2;
+  align-items: center;
+}
+.beforePage {
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.thisPage {
+  color: var(--dark-gray);
+  cursor: pointer;
+}
+
 /* footer */
 .footer {
   box-shadow: 0 -4px 26px rgba(0, 0, 0, 0.09);
   position: relative;
   z-index: 5;
   background-color: #fff;
+}
+
+/* Arenda */
+.promo-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.promo-image {
+  width: 100%;
+}
+
+.promo-content {
+  width: 100%;
+  max-width: 567px;
 }
