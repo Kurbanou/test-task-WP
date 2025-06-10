@@ -491,6 +491,7 @@ li:has(> ul) > ul {
 .tenant_slider_pagination {
   display: flex;
   gap: 13px;
+  user-select: none;
 }
 
 .tenant_slider_pagination img {
