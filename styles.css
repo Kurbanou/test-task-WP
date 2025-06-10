@@ -90,7 +90,7 @@ footer ul {
 }
 
 main li {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 main ul,
@@ -119,7 +119,7 @@ main li::marker {
   content: "";
   position: absolute;
   top: 50%;
-  right: -33px;
+  right: -36px;
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
@@ -166,15 +166,14 @@ main li::marker {
 }
 
 .search-form {
-  display: flex;
-  align-items: center;
   position: relative;
 }
 .search-field {
   height: 40px;
   padding: 0 40px 0 15px;
   font-size: 12px;
-  width: 268px;
+  width: 100%;
+  min-width: 268px;
   border-radius: 88px;
   box-shadow: 2px 4px 11px rgba(0, 0, 0, 0.17);
 }
@@ -334,7 +333,8 @@ li:has(> ul) > ul {
     display: none;
   }
   .container {
-    padding: 0 40px;
+    min-width: 268px;
+    padding: 0 20px;
   }
 }
 
@@ -344,8 +344,9 @@ li:has(> ul) > ul {
     display: none;
   }
   .container {
-    padding: 0 20px;
+    padding: 0 10px;
   }
+
   .search-form {
     position: absolute;
     left: 50%;
@@ -385,13 +386,10 @@ li:has(> ul) > ul {
   .nav_container::after {
     display: none;
   }
-  .search-field,
-  .search-form {
-    width: 335px;
+  .search-field {
+    max-width: 335px;
   }
-  .container {
-    padding: 0 20px;
-  }
+
   .header__logo img {
     width: 69px;
   }
@@ -427,8 +425,8 @@ li:has(> ul) > ul {
 .promo-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 80px;
+  gap: 25px;
+  margin-bottom: 75px;
 }
 
 .promo-image img {
@@ -437,7 +435,7 @@ li:has(> ul) > ul {
 
 .promo-content {
   width: 100%;
-  max-width: 560px;
+  max-width: 565px;
 }
 
 @media (max-width: 1919px) {
@@ -461,4 +459,125 @@ li:has(> ul) > ul {
 
 .advantages {
   margin-bottom: 30px;
+}
+
+/* tenants */
+.tenants {
+  margin-bottom: 80px;
+}
+.tenants h2 {
+  font-weight: 700;
+  font-size: clamp(1rem, calc(1rem + 2.5vw), 41px);
+  line-height: 1.5;
+  margin-bottom: 25px;
+  letter-spacing: 0.6px;
+}
+.tenants_inner {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.tenants_list {
+  width: 100%;
+  max-width: 680px;
+}
+.tenant_slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.tenant_slider_pagination {
+  display: flex;
+  gap: 13px;
+}
+
+.tenant_slider_pagination img {
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.tenant_slider_dots {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.tenant_slider-dot {
+  width: 6px;
+  height: 6px;
+  transition: all 0.3s linear;
+  border-radius: 100%;
+  background-color: var(--gray);
+}
+
+.tenant_slider-dot.active {
+  background-color: var(--dark-gray);
+  width: 9px;
+  height: 9px;
+}
+
+.tenant_slider_inner {
+  width: fit-content;
+  height: 150px;
+  display: flex;
+  gap: 50px;
+  transition: all 0.3s linear;
+}
+.slider_over {
+  overflow: hidden;
+  max-width: 1012px;
+  width: 100%;
+
+  display: flex;
+}
+
+.tenant_slider_inner img {
+  width: 300px;
+  /* opacity: 0; */
+  /* animation: fadeIn 0.5s forwards; */
+}
+
+.tenant_slider_inner :last-child {
+  margin-right: 0;
+}
+
+@keyframes fadeInleft {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInright {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1890px) {
+  .tenants h2 {
+    text-align: center;
+  }
+  .tenants_inner {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .tenant_slider_inner {
+    width: 100%;
+    max-width: fit-content;
+    height: 150px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+  }
 }
