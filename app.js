@@ -19,15 +19,33 @@ linkHeader.forEach((el) => {
   });
 });
 
+function updateSliderWidth() {
+  if (!sliderOver) {
+    console.error("Элемент sliderOver не найден!");
+    return;
+  }
+
+  const scrollbarWidth =
+    window.innerWidth - document.documentElement.clientWidth;
+  const width = window.innerWidth - scrollbarWidth - 20;
+  sliderOver.style.width = `${width}px`;
+  console.log("Ширина обновлена:", width);
+}
+
+let resizeTimeout;
+function handleResize() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    updateSliderWidth();
+  }, 100);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateSliderWidth();
+  window.addEventListener("resize", handleResize);
+});
+
 if (slider) {
-  window.addEventListener("load", () => {
-    sliderOver.style.width = `${window.innerWidth - 20}px`;
-  });
-
-  window.addEventListener("resize", () => {
-    sliderOver.style.width = `${window.innerWidth - 20}px`;
-  });
-
   const numDots = Array.from(sliderInner.children).length;
   for (let i = 0; i < numDots; i++) {
     const dot = document.createElement("div");
