@@ -496,7 +496,16 @@ li:has(> ul) > ul {
 .tenant_slider_pagination img {
   cursor: pointer;
   transition: all 0.3s linear;
+  user-select: none;
 }
+
+.tenant_slider_pagination_previous:hover {
+  transform: translateX(-5px);
+}
+.tenant_slider_pagination_next:hover {
+  transform: translateX(5px);
+}
+
 .tenant_slider_dots {
   display: flex;
   gap: 14px;
