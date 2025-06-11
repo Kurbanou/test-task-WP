@@ -68,7 +68,7 @@ if (slider) {
       if (dots[i].classList.contains("active")) {
         dots[i].classList.remove("active");
 
-        const nextIndex = (i + 1) % dots.length;
+        const nextIndex = (i - 1 + dots.length) % dots.length;
         dots[nextIndex].classList.add("active");
         break;
       }
@@ -76,11 +76,14 @@ if (slider) {
 
     const firstSlide = slides.shift();
     sliderInner.innerHTML = "";
+
     slides.forEach((slide) => {
-      slide.style.animation = "fadeInleft 1s forwards";
+      slide.style.animation = "fadeInright 1s forwards";
       sliderInner.appendChild(slide);
     });
     sliderInner.appendChild(firstSlide);
+
+    event.stopPropagation();
   });
 
   next.addEventListener("click", () => {
@@ -88,19 +91,20 @@ if (slider) {
     for (let i = 0; i < dots.length; i++) {
       if (dots[i].classList.contains("active")) {
         dots[i].classList.remove("active");
+        const nextIndex = (i + 1) % dots.length;
 
-        const nextIndex = (i - 1 + dots.length) % dots.length;
         dots[nextIndex].classList.add("active");
         break;
       }
     }
     const lastSlide = slides.pop();
     sliderInner.innerHTML = "";
-    lastSlide.style.animation = "fadeInright 1s forwards";
+    lastSlide.style.animation = "fadeInleft 1s forwards";
     sliderInner.appendChild(lastSlide);
     slides.forEach((slide) => {
-      slide.style.animation = "fadeInright 1s forwards";
+      slide.style.animation = "fadeInleft 1s forwards";
       sliderInner.appendChild(slide);
     });
+    event.stopPropagation();
   });
 }
