@@ -38,7 +38,7 @@ function testWP_enqueue_styles() {
 
     // Подключаем основной файл стилей темы в конце, чтобы он загружался последним
     wp_enqueue_style(
-        'skidles-main-style', 
+        'testWP-main-style', 
         get_stylesheet_uri(), 
         [], 
         '2.0'
@@ -130,4 +130,12 @@ function custom_breadcrumbs() {
     echo '</div>';
     echo '</div>';
     echo '</section>';
+}
+
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Настройки темы',
+        'menu_title' => 'Настройки темы',
+        'menu_slug'  => 'theme-settings',
+    ));
 }

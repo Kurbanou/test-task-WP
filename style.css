@@ -14,6 +14,7 @@ Version: 1.0
   --red-gradient: linear-gradient(to right, #cd3b31, #ed6259);
 }
 /* reset CSS */
+
 *,
 *::before,
 *::after {
@@ -33,6 +34,12 @@ body {
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
 }
 
 a {
@@ -422,7 +429,7 @@ li:has(> ul) > ul {
   z-index: 5;
   background-color: #fff;
   padding: 40px 0;
-  margin-top: 90px;
+  margin-top: auto;
 }
 
 .footer__container {
@@ -464,6 +471,7 @@ li:has(> ul) > ul {
   flex-direction: column;
   gap: 20px;
 }
+
 @media (max-width: 1686px) {
   .footer__container {
     flex-wrap: wrap;
@@ -535,6 +543,7 @@ li:has(> ul) > ul {
 
 .promo-image img {
   width: 100%;
+  min-width: 1164px;
 }
 
 .promo-content {
@@ -749,13 +758,15 @@ li:has(> ul) > ul {
 }
 
 /* 404 Page Styles */
-.error-404 {
+
+.error-404__content {
+  padding: 100px 0;
   text-align: center;
-  padding: 80px 20px;
-  min-height: 70vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .error-404__title {
@@ -801,4 +812,26 @@ li:has(> ul) > ul {
   .error-404__title {
     font-size: 80px;
   }
+}
+
+/* singl */
+.single h1,
+h4 {
+  text-align: center;
+}
+
+.news-content h4 {
+  text-align: unset;
+}
+
+.single_content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.single_content p {
+  text-indent: 1.5em;
+  margin: 0 0 1.8em;
 }

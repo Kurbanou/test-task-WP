@@ -25,7 +25,7 @@
     <title>
       Аренда помещений в ТЦ «Сарафан» в Туле | От 25 до 1000 м² | Собственник
     </title>
-    <link rel="stylesheet" href="styles.css" />
+    
      <?php wp_head(); ?>
   </head>
   <body>
@@ -44,8 +44,8 @@
             </div>
           </div>
           <div class="header__link">
-            <a href="<?php echo home_url(); ?>">Контакты</a>
-            <a href="<?php echo home_url(); ?>">Карта ТЦ</a>
+            <a href="<?php echo home_url(); ?>/o-nas/">Контакты</a>
+            <a href="<?php echo home_url(); ?>/karta-tcz/">Карта ТЦ</a>
           </div>
 
           <form
@@ -75,21 +75,21 @@
           </div>
         </div>
         <div class="nav_container">
-          <ul class="header_nav">
+          
            <?php wp_nav_menu([
               'theme_location' => 'header_menu_1',
               'container'      => false,
               'menu_class'     => 'header_nav',
             ]); ?>
-          </ul>
+         
 
-          <ul class="rubrika_nav">
+          
             <?php wp_nav_menu([
               'theme_location' => 'header_menu_2',
               'container'      => false,
               'menu_class'     => 'rubrika_nav',
             ]); ?>
-          </ul>
+          
         </div>
       </div>
     </header>
