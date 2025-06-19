@@ -5,6 +5,9 @@ const slider = document.querySelector(".tenant_slider");
 
 burger.addEventListener("click", () => {
   header.classList.toggle("active");
+  document.body.style.overflow = header.classList.contains("active")
+    ? "hidden"
+    : "auto";
 });
 
 linkHeader.forEach((el) => {
